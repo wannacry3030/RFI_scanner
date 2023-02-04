@@ -31,14 +31,14 @@ pb = ttk.Progressbar(
 
 #definindo o progress_label
 def update_progress_label():
-    return f"Progresso atual: {pb['value']}%"
+    return f"Progresso atual: {pb['value']}%"        
+#organizando visualmente
+pb.grid(column=0, row=0, columnspan=2, padx=10, pady=20)
 
 #criando a label
 value_label = ttk.Label(root, text=update_progress_label())
-value_label.grid(column=0, row=1, columnspan=2)
-        
 #organizando visualmente
-pb.grid(column=0, row=0, columnspan=2, padx=10, pady=20)
+value_label.grid(column=0, row=1, columnspan=2)
 
 #passando o metodo progressbar.start pro botao de start
 start_button = ttk.Button(
