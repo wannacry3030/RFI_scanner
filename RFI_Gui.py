@@ -25,7 +25,7 @@ start_button = ttk.Button(
   command=pb.start
 )
 #organizando visualmente
-start_button.grid()
+start_button.grid(column=0, row=1, padx=10, pady=10, sticky=tk.E)
 
 #passando o metodo stop pro botao stop
 stop_button = ttk.Button(
@@ -34,6 +34,6 @@ stop_button = ttk.Button(
   command=pb.stop
 )
 #organizando visualmente
-stop_button.grid()
+stop_button.grid(column=1, row=1, padx=10, pady=10, sticky=tk.W)
 
 root.mainloop()
