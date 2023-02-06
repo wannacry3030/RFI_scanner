@@ -1,0 +1,11 @@
+    1-Tratamento de erros: Adicionar tratamento de erros para lidar com casos em que a URL não seja encontrada ou não seja acessível.
+
+    2-Validação de URL: Adicionar validação para garantir que a URL fornecida seja válida antes de executar o escaneamento.
+
+    3-Verificação de status de resposta: Verifique o status de resposta da solicitação HTTP antes de verificar o conteúdo da resposta.
+
+    4-Fazer o trabalho de verificação de vulnerabilidade em uma thread separada: isso evitará que a interface gráfica trave enquanto o escaneamento é realizado.
+
+    5-Melhorar a estrutura do código: Separar as funções em módulos diferentes para tornar o código mais legível e manutenível.
+
+    6-Adicionar opções de personalização: Permitir ao usuário personalizar as opções de escaneamento, como a lista de arquivos que são testados, etc.
