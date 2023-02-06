@@ -2,6 +2,7 @@ import requests
 import tkinter as tk
 from tkinter import ttk
 
+#dork para scan: inurl:index.php?file= site:
 
 #definindo os botoes
 def run_scan():
@@ -16,9 +17,9 @@ def run_scan():
         rfi_url = url + "?page" + file
         response = requests.get(rfi_url)
         if "root" in response.text:
-            result_label.config(text=result_label.cget("text") + f"[+] is vulnerable to RFI: {rfi_url}")
+            result_label.config(text=result_label.cget("text") + f"[+] is vulnerable to RFI: {rfi_url}\n")
         else:
-            result_label.config(text=result_label.cget("text") + f"[+] is not vulnerable to RFI:{rfi_url}")
+            result_label.config(text=result_label.cget("text") + f"[+] is not vulnerable to RFI:{rfi_url}\n")
     pb.stop()
 
 
